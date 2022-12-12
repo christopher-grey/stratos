@@ -39,8 +39,8 @@ function SignUp() {
     <div id="button">
     <Button id="continue"> <LinkedInIcon id="seperateIcon"/> <div id="contentSwitch">Continue with Linkedin</div></Button>
     <Button id="continue"><InstagramIcon id="seperateIcon"/> <div id="contentSwitch">Continue with Instagram</div></Button>
-    {/* <Button id="continue" onClick={responseFacebook}> <FacebookIcon id="seperateIcon"/> <div id="contentSwitch">Continue with Facebook</div></Button> */}
-    <FacebookLogin appId="921201001964201"
+    <Button id="continue"><FacebookIcon id="seperateIcon"/> <div id="contentSwitch">Continue with Facebook</div></Button>
+    {/* <FacebookLogin appId="921201001964201"
               size="medium"
               autoLoad={true}
               fields="name,email,picture"
@@ -48,7 +48,7 @@ function SignUp() {
               callback={responseFacebook}
               render = {renderProps => (
                 <Button id="continue" onClick={renderProps.onClick}>Continue with Facebook</Button>
-              )} />
+              )} /> */}
     <Button id="continue" onClick={() => navigate("/SignUp2")}> <MailIcon id="seperateIcon"/> <div id="contentSwitch">Continue with Email</div></Button>
     </div>
     </div>

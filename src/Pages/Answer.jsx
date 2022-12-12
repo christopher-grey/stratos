@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useRef} from "react";
 import { useNavigate } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -21,6 +21,7 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Modal from '@mui/material/Modal';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+import {useLocation} from 'react-router-dom';
 
 
 const prompts = ["Maintaining work life balance", "Believe it or not, I...", 
@@ -30,9 +31,48 @@ const prompts = ["Maintaining work life balance", "Believe it or not, I...",
 
 function Answer() {
     const navigate = useNavigate()
+    const location = useLocation();
+    console.log("ANSWER", location)
     const [open, setOpen] = React.useState(false);
-    const handleOpen = () => setOpen(true);
+    // const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+
+
+    
+    const current = new Date();
+    const month = current.toLocaleString('default', { month: 'long' });
+    const [date, setDate] = useState(`${current.getDate()} ${month}, ${current.getFullYear()}`);
+    // const [currPrompt, setcurrPrompt] = useState(location.state.prompt)
+    const [promptMessage, setpromptMessage] = useState("")
+    const [postFlag, setpostFlag] = React.useState(false)
+    const tagSig = useRef(true)
+    const newPost = useRef(false)
+
+    // const [promp, setPromp] = useState(false)
+
+
+    // const [date, setDate] = useState("");
+    const handlePromptChange = event => {
+      setpromptMessage(event.target.value)
+      console.log("Prompt Message", promptMessage)
+    }
+
+    
+    
+    function onPost() {
+      setpostFlag(true)
+      if (typeof location.state.tag == 'undefined') {
+        console.log("got hereeeeee")
+        tagSig.current = false
+        console.log("NEWtagsig", tagSig)
+      }
+      // setTagSig(true)
+      setOpen(true);
+      newPost.current = true
+      navigate("/HomeScreen", {state: {newPost: newPost, tagSig: tagSig, tag: location.state.tag, date: date, name: location.state.name, prompt: location.state.prompt, promptMessage: promptMessage, selectedOptions: location.state.selectedOptions, jobtitle: location.state.jobtitle, postFlag: postFlag}})
+      newPost.current = false
+    }
+
     return (
         <Box sx={{ display: 'flex', backgroundColor: '#E5E5E5' }}>
           <CssBaseline />
@@ -52,7 +92,7 @@ function Answer() {
             {/* <Box> */}
             <List id="draw3" >
                 <ListItem disablePadding>
-                  <ListItemButton onClick={() => navigate("/HomeScreen")}>
+                  <ListItemButton onClick={() => navigate("/HomeScreen", {state: {date: date, name: location.state.name, prompt: location.state.prompt, promptMessage: promptMessage, selectedOptions: location.state.selectedOptions, jobtitle: location.state.jobtitle}})}>
                     <ListItemIcon>
                     <HomeIcon id="text"/>
                     </ListItemIcon>
@@ -60,7 +100,7 @@ function Answer() {
                   </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
-                  <ListItemButton onClick={() => navigate("/Prompts")}>
+                  <ListItemButton onClick={() => navigate("/Prompts", {state: {date: date, name: location.state.name, prompt: location.state.prompt, promptMessage: promptMessage, selectedOptions: location.state.selectedOptions, jobtitle: location.state.jobtitle}})}>
                     <ListItemIcon>
                     <AddIcon id="text"/>
                     </ListItemIcon>
@@ -84,7 +124,7 @@ function Answer() {
                   </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
-                  <ListItemButton onClick={() => navigate("/Profile")}>
+                  <ListItemButton onClick={() => navigate("/Profile", {state: {date: date, name: location.state.name, prompt: location.state.prompt, promptMessage: promptMessage, selectedOptions: location.state.selectedOptions, jobtitle: location.state.jobtitle}})}>
                     <ListItemIcon>
                     <PersonIcon id="text"/>
                     </ListItemIcon>
@@ -92,7 +132,7 @@ function Answer() {
                   </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
-                  <ListItemButton onClick={() => navigate("/Settings")}>
+                  <ListItemButton onClick={() => navigate("/Settings", {state: {date: date, name: location.state.name, prompt: location.state.prompt, promptMessage: promptMessage, selectedOptions: location.state.selectedOptions, jobtitle: location.state.jobtitle}})}>
                     <ListItemIcon>
                     <SettingsIcon id="text"/>
                     </ListItemIcon>
@@ -107,19 +147,18 @@ function Answer() {
             <div id="SOP">
             <h1 id="adda">Select a Prompt</h1>
             <h1 id="sopsop3">{'>'}</h1>
-            <h1 id="sopsop">Add a Answer</h1>
+            <h1 id="sopsop10">Add a Answer</h1>
             </div>
             <hr id="hrcol2"/>
           </div>
           <div id="rcornersprof2">
 
-            <h1 id="promptyprompt">Maintaining work life balance...</h1>
+            <div id="promptypromptPROMPT">{location.state.promp ? <h1 id="promptypromptTAG">{location.state.tag}</h1>: location.state.prompt}</div>
             <div>
-            <input  id="parainput"
-            type="text"/>
+            <input  id="parainput" type="text" onChange={handlePromptChange}/>
             </div>
             <div>
-            <Button id="confirm2" onClick={handleOpen}>Post</Button>
+            <Button id="confirm2" onClick={onPost}>Post</Button>
             <Modal
                 open={open}
                 onClose={handleClose}

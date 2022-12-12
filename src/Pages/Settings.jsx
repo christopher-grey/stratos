@@ -22,9 +22,11 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 import Avatar from '@mui/material/Avatar';
+import {useLocation} from 'react-router-dom';
 
 function Settings() {
     const navigate = useNavigate()
+    const location = useLocation();
     return (
         <Box sx={{ display: 'flex', backgroundColor: '#E5E5E5' }}>
           <CssBaseline />
@@ -44,7 +46,7 @@ function Settings() {
             {/* <Box> */}
             <List id="draw3" >
                 <ListItem disablePadding>
-                  <ListItemButton onClick={() => navigate("/HomeScreen")}>
+                  <ListItemButton onClick={() => navigate("/HomeScreen", {state:{name: location.state.name, email: location.state.email, jobtitle: location.state.jobtitle, DOB: location.state.DOB, cityState: location.state.cityState, password: location.state.password, school: location.state.school, selectedOptions: location.state.selectedOptions}})}>
                     <ListItemIcon>
                     <HomeIcon id="text"/>
                     </ListItemIcon>
@@ -52,7 +54,7 @@ function Settings() {
                   </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
-                  <ListItemButton onClick={() => navigate("/Prompts")}>
+                  <ListItemButton onClick={() => navigate("/Prompts", {state:{name: location.state.name, email: location.state.email, jobtitle: location.state.jobtitle, DOB: location.state.DOB, cityState: location.state.cityState, password: location.state.password, school: location.state.school, selectedOptions: location.state.selectedOptions}})}>
                     <ListItemIcon>
                     <AddIcon id="text"/>
                     </ListItemIcon>
@@ -60,7 +62,7 @@ function Settings() {
                   </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
-                  <ListItemButton>
+                  <ListItemButton onClick={() => navigate("/Jobs", {state:{name: location.state.name, email: location.state.email, jobtitle: location.state.jobtitle, DOB: location.state.DOB, cityState: location.state.cityState, password: location.state.password, school: location.state.school, selectedOptions: location.state.selectedOptions}})}>
                     <ListItemIcon>
                     <WorkIcon id="text"/>
                     </ListItemIcon>
@@ -76,7 +78,7 @@ function Settings() {
                   </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
-                  <ListItemButton onClick={() => navigate("/Profile")}>
+                  <ListItemButton onClick={() => navigate("/Profile", {state:{name: location.state.name, email: location.state.email, jobtitle: location.state.jobtitle, DOB: location.state.DOB, cityState: location.state.cityState, password: location.state.password, school: location.state.school, selectedOptions: location.state.selectedOptions}})}>
                     <ListItemIcon>
                     <PersonIcon id="text"/>
                     </ListItemIcon>
@@ -84,7 +86,7 @@ function Settings() {
                   </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
-                  <ListItemButton onClick={() => navigate("/Settings")}>
+                  <ListItemButton onClick={() => navigate("/Settings", {state:{name: location.state.name, email: location.state.email, jobtitle: location.state.jobtitle, DOB: location.state.DOB, cityState: location.state.cityState, password: location.state.password, school: location.state.school, selectedOptions: location.state.selectedOptions}})}>
                     <ListItemIcon>
                     <SettingsIcon id="text"/>
                     </ListItemIcon>

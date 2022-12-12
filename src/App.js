@@ -23,6 +23,8 @@ import Website from './Pages/Website';
 import WhatIsStratos from './Pages/WhatIsStratos';
 import MeetTheFounders from './Pages/MeetTheFounders';
 import BrowsePartners from './Pages/BrowsePartners';
+import Jobs from './Pages/Jobs';
+import JobDetails from './Pages/JobDetails';
 
 
 
@@ -50,6 +52,8 @@ function App() {
         <Route path="/WhatisStratos" element={<WhatIsStratos />} />
         <Route path="/MeetTheFounders" element={<MeetTheFounders />} />
         <Route path="/BrowsePartners" element={<BrowsePartners />} />
+        <Route path="/Jobs" element={<Jobs/>}/>
+        <Route path="/JobDetails" element={<JobDetails/>}/>
       </Routes>
     </Router>
       

@@ -9,6 +9,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import Typewriter from 'typewriter-effect';
+import { db } from "../firebase";
+// import { collection, addDoc } from "firebase/firestore";
 
 
 
@@ -17,6 +19,25 @@ function Website() {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+    const [email, setEmail] = React.useState("");
+    const [name,setName] = React.useState("");
+
+    // const updateDBJoin = async (e) => {
+    //   e.preventDefault();
+  
+    //   try {
+    //     const docRef = await addDoc(collection(db, "info"), {
+    //       email: email,
+    //       name: name,
+    //     });
+    //     setEmail("");
+    //     setName("");
+    //     // ConfirmationModal();
+    //   } catch (e) {
+    //     console.error("Error adding document: ", e);
+    //   }
+    // };
+
     return (
         <div id="background">
         <div class="navbar">
@@ -78,9 +99,12 @@ function Website() {
                 <Box id="boxbox">
                 <h1 id="signup">Sign Up</h1>
                 <ul>
-                <input id="signup_input" placeholder="Name"></input>
-                <input id="signup_input" placeholder="Email"></input>
+                <form> 
+                {/* onSubmit={updateDBJoin} */}
+                <input id="signup_input" type="text" placeholder="Name"></input>
+                <input id="signup_input" type="text" placeholder="Email"></input>
                 <Button id="subsub">Submit</Button>
+                </form>
                 </ul>
                 </Box>
             </Modal>

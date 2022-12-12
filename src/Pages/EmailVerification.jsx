@@ -2,8 +2,12 @@ import React from "react";
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import {useLocation} from 'react-router-dom';
 
 function EmailVerification() {
+
+    const location = useLocation();
+    console.log("EV locations", location)
 
     const navigate = useNavigate()
     return <div className='welcome'>
@@ -22,8 +26,9 @@ function EmailVerification() {
     <input id="boxes" type="number"/>
     <input id="boxes" type="number"/>
     </div>
+    {/* <div>{location.state.jobtitle}</div> */}
     <div>
-    <Button id="confirm" onClick={() => navigate("/LayersPreference")}>Confirm</Button>
+    <Button id="confirm" onClick={() => navigate("/LayersPreference", {state:{name: location.state.name, email: location.state.email, bio: location.state.bio, jobtitle: location.state.jobtitle, DOB: location.state.DOB, cityState: location.state.cityState, password: location.state.password, school: location.state.school}})}>Confirm</Button>
     </div>
     <div>
     <p1 id="details">Didn't get your code? </p1>
