@@ -19,7 +19,7 @@ function CommunityGuidelines() {
     // const bodyParser = require("body-parser");
     // const app = express();
 
-  //   // Use the body-parser package to parse the request body
+    // Use the body-parser package to parse the request body
   //   app.use(bodyParser.json());
 
   //   // Route to handle the data submission
@@ -101,7 +101,7 @@ function CommunityGuidelines() {
         navigate("/HomeScreen", {state:{name: location.state.name, email: location.state.email, bio: location.state.bio, jobtitle: location.state.jobtitle, DOB: location.state.DOB, cityState: location.state.cityState, password: location.state.password, school: location.state.school, selectedOptions: location.state.selectedOptions}})
       }
 
-    return <div className="welcome">
+    return <div id="welcome">
     <div id="rcorners_comguide">
     <h1 id="create_account_com">Community Guidelines</h1>
     <h2 id="everyone">Stratos is for everyone</h2>

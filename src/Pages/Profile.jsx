@@ -16,8 +16,10 @@ function Profile() {
           {/* <div id="rcornersprofPROF">  */}
             <div id="profModal">
             <div id="prof">
-            <div>
+            <div id="prof2">
+            <img id="profimg" src="src/components/pexels-pixabay-220453.jpg" width="300" height="300"/>
             <div id="profName">
+
             {location.state.name}
             </div>
             <div>
@@ -26,20 +28,20 @@ function Profile() {
             </div>
             </div>
             <div id="profpersonal2">
-            <p>Job Title</p>
+            <h1>Job Title</h1>
             <p id="profJT">{location.state.jobtitle}</p>
             </div>
             <hr id="hr"/>
-            <p>Bio</p>
-            <div id="profileBio">
+            <h1>Bio</h1>
+            <p1 id="profileBio">
             {location.state.bio}
-            </div>
+            </p1>
             {/* <hr id="hr"/> */}
             <div id="profpersonal">
             </div>
             <hr id="hr"/>
             <div id="profpersonal">
-            <p>My Layers</p>
+            <h1>My Layers</h1>
             <div id="border">
             <ol id="orderedlist">
             {location.state.selectedOptions.map(layer =>
@@ -52,7 +54,7 @@ function Profile() {
             </div>
             <hr id="hr"/>
             <div id="profpersonal">
-            <p>Experience</p>
+            <h1>Experience</h1>
             </div>
             </div>
             </div>

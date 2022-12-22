@@ -112,24 +112,24 @@ function Settings() {
             <Avatar id="av" alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
             </div>
             <div>
-            <input id="rcornersprof5" placeholder="First Name"/>
+            <input id="rcornersprof5" placeholder={location.state.name}/>
             </div>
             <div>
-            <input id="rcornersprof6" placeholder="Birth Date"/>
+            <input id="rcornersprof6" placeholder={location.state.DOB}/>
             </div>
             <div>
-            <input id="rcornersprof7" placeholder="Bio"/>
+            <input id="rcornersprof7" placeholder={location.state.bio}/>
             </div>
             <hr id="hrhrhr"/>
             <Button id="cancelcancel">Cancel</Button>
             <Button id="savesave">Save</Button>
             </div>
             <div id="inp2">
-            <div>
+            {/* <div>
             <input id="rcornersprof55" placeholder="Last Name"/>
-            </div>
+            </div> */}
             <div>
-            <input id="rcornersprof56" placeholder="City"/>
+            <input id="rcornersprof56" placeholder={location.state.cityState}/>
             </div>
             </div>
 

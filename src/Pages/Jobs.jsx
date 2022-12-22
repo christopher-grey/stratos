@@ -33,6 +33,12 @@ import NavBar from '../components/NavBar';
 function Jobs() {
     const navigate = useNavigate()
     const location = useLocation();
+    // const [search, setSearch] = useState("");
+
+    // const handleSearchChange = e => {
+    //   setSearch(e.target.value)
+    //   console.log("Handling search", e.target.value)
+    // }
 
     return (
     <div>

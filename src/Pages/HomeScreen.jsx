@@ -33,6 +33,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import UniquePost from '../components/UniquePost';
 
+
 // import SearchBar from "material-ui-search-bar";
 
 
@@ -59,6 +60,11 @@ function HomeScreen() {
     const [likeCount, setLikeCount] = useState(0)
     const [commentCount, setCommentCount] = useState(0)
     const [shareCount, setShareCount] = useState(0)
+
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
     function onClickLike() {
       setLikeCount(likeCount + 1)
       console.log("CURRENT COUNT", likeCount)

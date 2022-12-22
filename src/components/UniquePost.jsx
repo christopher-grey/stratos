@@ -7,15 +7,56 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 import ChatIcon from '@mui/icons-material/Chat';
 import ReplyIcon from '@mui/icons-material/Reply';
+import Modal from '@mui/material/Modal';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import { IconButton } from '@mui/material';
+
 
 
 function UniquePost(props) {
     const [likeCount, setLikeCount] = useState(0)
     const [commentCount, setCommentCount] = useState(0)
     const [shareCount, setShareCount] = useState(0)
+
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
+    const style = {
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      width: 400,
+      bgcolor: 'background.paper',
+      border: '2px solid #000',
+      boxShadow: 24,
+      p: 4,
+    };
+
     function onClickLike() {
       setLikeCount(likeCount + 1)
       console.log("CURRENT COUNT", likeCount)
+      setOpen(true)
+      console.log("OPEN", open)
+      return <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+
+        <Box sx={style}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+            Text in a modal
+          </Typography>
+          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+          </Typography>
+        </Box>
+
+        </Modal>
 
     }
     function onClickComment() {
@@ -54,22 +95,22 @@ function UniquePost(props) {
           <hr id="promptHL"/>
           <div id="postIcons">
           <div id="thumbsUp">
-          <Button onClick={onClickLike}>
+          <IconButton className={"MyCustomButton"} onClick={onClickLike}>
           <ThumbUpAltIcon id="thumbsUpIcon" />
           <div id="likeCount">{likeCount == 0 ? null: likeCount}</div>
-          </Button>
+          </IconButton>
           </div>
           <div id="comments">
-          <Button onClick={onClickComment}>
+          <IconButton className={"MyCustomButton"} onClick={onClickComment}>
           <ChatIcon id="commentsIcon"/>
           <div id="commentCount">{commentCount == 0 ? null: commentCount}</div>
-          </Button>
+          </IconButton>
           </div>
           <div id="share">
-          <Button onClick={onClickShare}>
+          <IconButton className={"MyCustomButton"} onClick={onClickShare}>
           <ReplyIcon id="shareIcon"/>
           <div id="shareCount">{shareCount == 0 ? null: shareCount}</div>
-          </Button>
+          </IconButton>
           </div>
           </div>
         </div>

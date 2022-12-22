@@ -52,7 +52,7 @@ function InformationVerification() {
     }
 
     
-    return <div className='welcome'>
+    return <div id='welcome'>
     <div id="rcorners4">
     <div id="heading2">
     <Button onClick={() => navigate("/LayersPreference")}>

@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { prisma } from "@prisma/client";
 import {Link} from 'react-router-dom';
+import IconButton from '@material-ui/core/IconButton';
+
 
 // const { PrismaClient } from '@prisma/client';
 
@@ -62,12 +64,12 @@ function SignUp2() {
       console.log("School is:", event.target.value)
     }
 
-    return <div className='welcome'>
+    return <div id='welcome'>
     <div id="rcorners3">
     <div id="heading">
-    <Button onClick={() => navigate("/SignUp")}>
+    <IconButton className={"MyCustomButton"} onClick={() => navigate("/SignUp")}>
     <ArrowBackIcon className="gg-arrow-left"/>
-    </Button>
+    </IconButton>
     <p1 id="create_account">Create account</p1>
     </div>
     <p id="details">Enter the details below</p>
@@ -77,9 +79,9 @@ function SignUp2() {
     <input id="signup-buttons" type="text" placeholder="Email" name="Email"  onChange={handleEmailChange} required/>
     <input id="signup-buttons" type="text" placeholder="Job Title" name="Job Title"  onChange={handleJobChange} required/>
     <input id="signup-buttons" type="text" onfocus="(this.type='date')" placeholder="Birth Date mm-dd-yyyy" name="Birth Date" onChange={handleDOBChange} required/>
-    <input list="states" id="signup-buttons" type="list" placeholder="City, State" name="City, State"  onChange={handleCityStateChange} required/>
-    <input list="states" id="signup-buttons" type="list" placeholder="School" name="School" onChange={handleSchoolChange}  required/>
-    <input id="bio-box" placeholder="Bio" onChange={handleBioChange}/>
+    <input list="states" id="signup-buttons" type="text" placeholder="City, State" name="City, State"  onChange={handleCityStateChange} required/>
+    <input list="states" id="signup-buttons" type="text" placeholder="School" name="School" onChange={handleSchoolChange}  required/>
+    <input id="bio-box" placeholder="Bio" type="text2" onChange={handleBioChange}/>
     <input id="signup-buttons" type="password" placeholder="Password" name="Password"  onChange={handlePasswordChange} required/>
     </form>
     {/* <p1>the job title is {jobtitle}</p1> */}

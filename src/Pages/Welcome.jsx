@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Welcome() {
     const navigate = useNavigate()
-    return <div className="welcome">
+    return <div id="welcome">
     <div id="rcorners2">
       <p1 id="community"> Community & Networking </p1> <br/>
       <p2 id="motto"> A new way for Black & Latinx professionals <br/> to network with each other</p2>
