@@ -8,6 +8,8 @@ import { useNavigate } from 'react-router-dom';
 import MailIcon from '@mui/icons-material/Mail';
 import FacebookLogin from 'react-facebook-login';
 // import Welcome from "./Pages/Welcome";
+import IconButton from '@material-ui/core/IconButton';
+
 
 function SignUp() {
     const navigate = useNavigate()
@@ -28,12 +30,12 @@ function SignUp() {
         }
 
 
-    return  <div className='welcome'>
+    return  <div id='welcome'>
     <div id="rcorners2">
     <div id="heading">
-    <Button onClick={() => navigate("/Welcome")}>
+    <IconButton className={"MyCustomButton"} onClick={() => navigate("/Welcome")}>
     <ArrowBackIcon className="gg-arrow-left"/>
-    </Button>
+    </IconButton>
     <p1 id="create_account"> Create account</p1>
     </div>
     <div id="button">

@@ -4,7 +4,7 @@
   /* background-color: black; */
 }
 .top{
-  background-image: url("https://s3-alpha-sig.figma.com/img/fa79/eb47/c5de70e31559c9a6962f8b8d452d476b?Expires=1665360000&Signature=XOR~I8quGoqCK4cbgsQ5ffa8v3m6MOlKJmxC7fN4p1TK5s7s0z7nGbFyDJzn8AoEHlRZEbuD9Wds29JZiucl2nza-HRPcm84oJ4S8blRb7DDJyaOgtZC~JwyawHFi7lwYjRELOB0JdolPyIw5twS9q-niStfbQo5xHweQfquRvo4pmB7K7ZjD1oi6fUenLMFdKCeeId2B-pV0LZSGBYX7yrahRWQGsg9Gc-HSJLmRelWMAXJRJVo9ZJ~XdukxR0Xe474UYHvXUN4B6kLNDON~oJcwSqwuB2rOcR45GUd9DuIv8IAo1sJP2qmHBat11NCArJrnXvxGzmabremNknQpg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
+  background-image: url("https://s3-alpha-sig.figma.com/img/fa79/eb47/c5de70e31559c9a6962f8b8d452d476b?Expires=1672617600&Signature=kDBwPzP2m0ouhQXQSDZqiJXVZ4dRRd3bwFLK-DhMoUteWVfEfqMsEUcDGmm3n2XAoAwdjxsRht7G2Brn-Vcq1a573wRxZcG28cy-x1fuLRc1dH5lKsku5gFeMgc1NmFe2UUIryD~yrmt6h1anXjP7rVQiOD7XuUJVSmGwA7-yMvQf29XarEJzjlZ-0DnkJpJaHOQAJVN90zb2NsXjbnm3L84NH0iMk-XymxrtXlHB1HnT7CQwC0US4XX7-JZfPrO-AePNZYzN693y2yYKTwm0ppZ9NKoGWxoDoag2xfquEkwnwWNFcmqpRiMLKIoa631-bAd6j-1ETcmm1t91zw5YA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
   background-position: center;
   height: 2250px;
 }
@@ -21,8 +21,8 @@
         
 }
 
-.welcome {
-  background-image: url("https://s3-alpha-sig.figma.com/img/fa79/eb47/c5de70e31559c9a6962f8b8d452d476b?Expires=1668988800&Signature=JU6GgpyTGoWFRFVjo5vTjpFS3ccDnupYmcLandF~GyvRuxUUMSX0nNtBqGx-~gHcGisFc0FFW7-jnFqL7j8lQ4qnnbW8gT5PJROLLQYYyZYCQ0JsIGircskkzA6Rq5WsN3rcth7Xz-oVglmeUnkR8~ds3JRMZi-3dZQVXId34pjchO-DnkUvCxIRNe8-8WeGS2O5aJDzBHdasnE2MXyRyYr~VQ0W17tj~9rMTerCuZ0xI28OblwHZqWYoyyYNfmCjHTfq0z98sWEiKZXta1eABGDMJGRpcDnaVQoimnyhUQd9sC9I9nzILLvKNUxD~Px~KPSOwA41AlSzijsMKrPOw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"), url("https://s3-alpha-sig.figma.com/img/c878/c42f/34cc79a861a2584855c09104fbf8ee9a?Expires=1668988800&Signature=bScZDMvvbEajt4LNIf5GfLIADX4VxpC-cqzlZGQJsjdwtlc8OpegUGDO~HRRH0ZlTgrbH6KOBOWVTVWDA-CxZh-~LtFFgfkWhK~SpblI1bJBbMzt6nmxwr454v8ofJXJFHf1ZC082uj3pNoo4X6v9INUkugg7nJVQf7LG7k8hQjwPobC8DnoBZCoSgvoJ4nuB6biOTumG3LACWonZTc8zx9splvniCWiwluFrzhLWsGDtXRIlCOKSx~fkvnQLrW50oOGPFshEmNU~Xceh5SuqpkxPqoYOyVS7LgzEMPxtlNU9DxCdTl1N3u30YbZNYIIYhr3OpDf4kzyOA785WYkFQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
+#welcome {
+  background-image: url("https://s3-alpha-sig.figma.com/img/fa79/eb47/c5de70e31559c9a6962f8b8d452d476b?Expires=1672617600&Signature=kDBwPzP2m0ouhQXQSDZqiJXVZ4dRRd3bwFLK-DhMoUteWVfEfqMsEUcDGmm3n2XAoAwdjxsRht7G2Brn-Vcq1a573wRxZcG28cy-x1fuLRc1dH5lKsku5gFeMgc1NmFe2UUIryD~yrmt6h1anXjP7rVQiOD7XuUJVSmGwA7-yMvQf29XarEJzjlZ-0DnkJpJaHOQAJVN90zb2NsXjbnm3L84NH0iMk-XymxrtXlHB1HnT7CQwC0US4XX7-JZfPrO-AePNZYzN693y2yYKTwm0ppZ9NKoGWxoDoag2xfquEkwnwWNFcmqpRiMLKIoa631-bAd6j-1ETcmm1t91zw5YA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"), url("https://s3-alpha-sig.figma.com/img/c878/c42f/34cc79a861a2584855c09104fbf8ee9a?Expires=1672617600&Signature=YlPDKrGhRHRhK1KREvj1wYA7NBZrY6qnFDo-EKhkfxTOjhUini463If-VASlU8SGa5fvPgUsg8IjUrHb6W3tTGqHD4DkgL2ZUQeoRURO2ko-aN-FsRpV~i0FVDOjzVg1J5gLCP2rxOh6Rmu0~BxYxuHO7tqEQTfHokzNeOWaNdsor01Al1ZeLZdKRVbzgak868kfH9M2Na3-034fHFIUikhqyor4FVeo2CmS~yw-Mh3~5UC8R1pCkXGLonnAjAOPiNhHx4hesBY11eIWQsEQ4c9s6OymNzso9PlFw82ADAIR~7fqoKWx1gUFRin6wCVgDFRJGNSN2bU5-QX7t5rEvg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
   background-size: 300px, auto;
   background-position: 50% 6%;
   background-repeat: no-repeat, repeat;
@@ -300,6 +300,7 @@
   height: 82px; */
   color: #52B1BB;
   margin-right: 165px;
+  box-shadow: none !important;
   /* size: 15%; */
  }
  
@@ -339,18 +340,34 @@
 #span {
   display: block;
 }
+input[type="text"]
+{
+    font-size:44px;
+}
+input[type="password"]
+{
+    font-size:44px;
+}
+input[type="text2"]
+{
+    font-size:24px;
+}
 
 #signup-buttons{
   width: 630px;
   height: 76px;
   margin-bottom: 30px;
   border-radius: 10px;
+  border-color: #D2E1E2;
+  background-color: #F3F9FB;
 }
 #bio-box{
   width: 630px;
   height: 176px;
   margin-bottom: 30px;
   border-radius: 10px;
+  border-color: #D2E1E2;
+  background-color: #F3F9FB;
 }
 
 #verification{
@@ -403,6 +420,9 @@
   position: absolute;
   margin-left: 4%;
 
+}
+.MyCustomButton:hover {
+  background-color: inherit !important;
 }
 
 #resend{
@@ -511,6 +531,9 @@
   margin-top: -21%;
 }
 
+#profimg{
+  border-radius: 50%;
+}
 #twoModal{
   justify-content: space-around;
 }
@@ -727,6 +750,7 @@
   #profileBio{
     font-size: 38px;
     color: #2A2E33;
+    overflow-wrap: normal;
   }
   #rcorners1012 {
     /* margin-top: 400px; */
@@ -766,7 +790,11 @@
   }
   #roletypes{
     display: flex;
+    /* margin-bottom: 2%; */
     /* color: #FFFFFF; */
+  }
+  #prof2{
+    flex-direction: row;
   }
   #profModal {
     /* margin-top: 400px; */
@@ -788,7 +816,7 @@
     position: absolute;
     top: 50%;
     left: 56%;
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
 
     transform: translate(-50%, -50%)
     /* min-height: 100vh; */
@@ -1035,7 +1063,9 @@
     /* display: inline-grid; */
     justify-content: center;
     align-items: center;
-    text-align: center;
+    /* vertical-align: top; */
+    text-align: left;
+    /* text-align: center; */
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     font-size: 38px;
@@ -1110,7 +1140,7 @@
     /* display: inline-grid; */
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: left;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     font-size: 38px;
@@ -1135,7 +1165,7 @@
     /* display: inline-grid; */
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: left;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     font-size: 38px;
@@ -1160,7 +1190,7 @@
     /* display: inline-grid; */
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: left;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     font-size: 38px;
@@ -1185,7 +1215,7 @@
     /* display: inline-grid; */
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: left;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     font-size: 38px;
@@ -1240,7 +1270,7 @@
   #inp2{
     display: block;
     margin-left: -25%;
-    margin-top: -29%;
+    margin-top: -29.8%;
   }
   #hrhrhr{
     margin-left: 42.5%;
@@ -1294,7 +1324,7 @@
   }
   #bu2{
     color: #000000;
-    width: 350px;
+    width: 370px;
   }
   #contents_prompt{
     left: 2%;
@@ -1358,6 +1388,7 @@
   margin-top: 60px;
   display: flex;
   text-align: start;
+  font-size: 38px;
   /* align-items: center; */
   flex-direction: column
   
@@ -1406,7 +1437,7 @@
     height: 90px;
     margin-left: 40px;
     background-color: #399FAA;
-    background-image: url("https://s3-alpha-sig.figma.com/img/fa79/eb47/c5de70e31559c9a6962f8b8d452d476b?Expires=1670803200&Signature=a4Euw-mHCBr~7hDe529QM-80grk7Wn7979UbI8UKqTY83oPjHtYj6vXy3khcy0QimwX70apYy358jkINf19Zuw4bGGhTuboW9y0P~v55oGKytNDdroR6s55SkUuHk5jBcegj3C3hMsIEzKjb-5dfoa~OFW752AomItfAPFhRhe0pj9Ya1MTImdeOZOQoTMyl~PArvub9DBBsMywu3kh7VfqbCj2zwzXT-6biaJ9dcKL4NeEy4qE6jf79YhSaeB99P~52T-6yKZ4NJsKXlGxk3hoZ4I02gNg9q-xYrL6XLo5yp3~POY4VVUxcy2DBiv-RMIaV-2ifCF01FVxTR2cM3g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
+    background-image: url("https://s3-alpha-sig.figma.com/img/fa79/eb47/c5de70e31559c9a6962f8b8d452d476b?Expires=1672617600&Signature=kDBwPzP2m0ouhQXQSDZqiJXVZ4dRRd3bwFLK-DhMoUteWVfEfqMsEUcDGmm3n2XAoAwdjxsRht7G2Brn-Vcq1a573wRxZcG28cy-x1fuLRc1dH5lKsku5gFeMgc1NmFe2UUIryD~yrmt6h1anXjP7rVQiOD7XuUJVSmGwA7-yMvQf29XarEJzjlZ-0DnkJpJaHOQAJVN90zb2NsXjbnm3L84NH0iMk-XymxrtXlHB1HnT7CQwC0US4XX7-JZfPrO-AePNZYzN693y2yYKTwm0ppZ9NKoGWxoDoag2xfquEkwnwWNFcmqpRiMLKIoa631-bAd6j-1ETcmm1t91zw5YA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
     background-position: 48% 17%;
     background-size: 7%;
     background-repeat: no-repeat;
@@ -1524,7 +1555,7 @@
 
 #icon_colors{
   color: #52B1BB;
-  margin-right: 3%;
+  margin-right: 1%;
 }
 
 /* #nav-bar{
@@ -2003,7 +2034,7 @@
   height: 30px;
   width: 30px;
   align-items: center;
-  margin-top: 1.8%;
+  margin-top: 1.3%;
   color: #A9A9A9;
 }
 
@@ -2071,8 +2102,15 @@
   margin-left: 4%;
 }
 #hicon{
+  margin-bottom: 4%;
   position: absolute;
   right: 160px;
+  margin-top: -1.3%;
+  /* margin-bottom: 13%; */
+  /* align-items: flex-end; */
+}
+#layerwords{
+  margin-top: -1.3%;
 }
 #highlightbutton{
   pointer-events: none;
@@ -2080,6 +2118,7 @@
 
 #highlighticon{
   transform: scale(.5);
+  /* margin-bottom: 14%; */
   /* float: right; */
   /* align-items: end; */
   /* right: 72%; */
@@ -2238,22 +2277,23 @@
   color: #707070;
 }
 #savebookmark{
+  position:fixed;
   color: #ACACAC;
   margin-top: 2%;
   /* right: 120%; */
-  margin-left: 25%;
-  position:fixed;
+  margin-left: 21%;
+  
 }
 #hr_job{
   height: 1px;
   background-color: #DDDDDD;
   border: none;
 }
-#roletypes{
-  margin-left: 18%;
+#jobcard_roletypes{
+  margin-left: 21%;
   display: flex;
   color: #000000;
-  /* margin-bottom: 33%; */
+  /* margin-bottom: 96%; */
 }
 #typeOfRole{
   margin-right: 8%;

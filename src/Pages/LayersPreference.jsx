@@ -8,6 +8,7 @@ import {useLocation} from 'react-router-dom';
 import DensityMediumIcon from '@mui/icons-material/DensityMedium';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import DehazeIcon from '@mui/icons-material/Dehaze';
+import { IconButton } from "@mui/material";
 
 const layersList = [
     {label: 'Technology', value: 'Technology'},
@@ -36,6 +37,7 @@ const SelectBox = ({children, onChange, value}) => (
 // };
 
 
+
 function LayersPreference() {
   // const [selected, setSelected] = useState([]);
 
@@ -46,13 +48,28 @@ function LayersPreference() {
     if (selectedOptions.length == 0) {
       return <p1 id="details">No Layer selected yet</p1>
     }
+
+    const handleLayerClick = e => {
+      console.log("reached here")
+      var item = e.value
+      console.log("item to delete", item)
+      var index = selectedOptions.indexOf(item)
+      if (index > - 1) {
+        selectedOptions.splice(index, 1)
+      }
+    }
+
     return selectedOptions.map(layer => <div id="indlayer">
       <div id="individualLayer">
       <DehazeIcon id="dehaze"/>
+      <div id="layerwords">
       {layer.value}
+      </div>
 
       <div id="hicon">
+    <IconButton onClick={handleLayerClick} className={"MyCustomButton"}>
     <HighlightOffIcon id="highlighticon"/>
+    </IconButton>
     </div>
     </div>
     </div>)
@@ -65,18 +82,19 @@ function LayersPreference() {
     // console.log("OPTIONS STUFF", options.target.value)
     setSelectedOptions(options);
   };
+
   console.log("SELECTED OPTIONS RIGHT BEFORE map", selectedOptions)
 
   const location = useLocation();
   console.log("LP", location)
 
   const navigate = useNavigate()
-    return <div className='welcome'>
+    return <div id='welcome'>
     <div id="rcorners3">
     <div id="heading">
-    <Button onClick={() => navigate("/EmailVerification")}>
+    <IconButton className={"MyCustomButton"} onClick={() => navigate("/EmailVerification")}>
         <ArrowBackIcon className="gg-arrow-left"/>
-    </Button>
+    </IconButton>
       <p1 id="create_account">Select Layers</p1>
     </div>
       <p1 id="details">Select corresponding industries <br/> or interests</p1>

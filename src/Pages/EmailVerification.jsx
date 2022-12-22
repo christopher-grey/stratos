@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import {useLocation} from 'react-router-dom';
+import { IconButton } from "@mui/material";
 
 function EmailVerification() {
 
@@ -10,12 +11,12 @@ function EmailVerification() {
     console.log("EV locations", location)
 
     const navigate = useNavigate()
-    return <div className='welcome'>
+    return <div id='welcome'>
     <div id="rcorners2">
     <div id="heading">
-    <Button onClick={() => navigate("/SignUp2")}>
+    <IconButton className={"MyCustomButton"} onClick={() => navigate("/SignUp2")}>
     <ArrowBackIcon className="gg-arrow-left"/>
-    </Button>
+    </IconButton>
     <p1 id="create_account">Email Verification</p1>
     </div>
     <p1 id="details">Enter the verification code we sent on your email address</p1>
