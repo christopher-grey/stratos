@@ -112,7 +112,7 @@ function Settings() {
             <Avatar id="av" alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
             </div>
             <div>
-            <input id="rcornersprof5" placeholder={location.state.name}/>
+            <input id="rcornersprof5" placeholder={location.state.name}/> 
             </div>
             <div>
             <input id="rcornersprof6" placeholder={location.state.DOB}/>
