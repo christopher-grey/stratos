@@ -22,6 +22,7 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 import Select from 'react-select';
+import {useLocation} from 'react-router-dom';
 const layersList = [
     {label: 'Technology', value: 'Technology'},
     {label: 'Management Consultant', value: 'Management Consultant'},
@@ -33,6 +34,9 @@ const layersList = [
 
 function MyLayers() {
     const navigate = useNavigate()
+    const location = useLocation();
+    console.log("MY LAYERS LOCATION", location)
+
     return (
         <Box sx={{ display: 'flex', backgroundColor: '#E5E5E5' }}>
           <CssBaseline />
@@ -51,65 +55,65 @@ function MyLayers() {
             {/* <Toolbar /> */}
             {/* <Box> */}
             <List id="draw3" >
-                <ListItem disablePadding>
-                  <ListItemButton onClick={() => navigate("/HomeScreen")}>
-                    <ListItemIcon>
-                    <HomeIcon id="text"/>
-                    </ListItemIcon>
-                    <ListItemText id="text" primary={"Home"} />
-                  </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding>
-                  <ListItemButton onClick={() => navigate("/Prompts")}>
-                    <ListItemIcon>
-                    <AddIcon id="text"/>
-                    </ListItemIcon>
-                    <ListItemText id="text" primary={"Post"} />
-                  </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding>
-                  <ListItemButton>
-                    <ListItemIcon>
-                    <WorkIcon id="text"/>
-                    </ListItemIcon>
-                    <ListItemText id="text" primary={"Jobs"} />
-                  </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding>
-                  <ListItemButton>
-                    <ListItemIcon>
-                    <NotificationsIcon id="text"/>
-                    </ListItemIcon>
-                    <ListItemText id="text" primary={"Notifications"} />
-                  </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding>
-                  <ListItemButton onClick={() => navigate("/Profile")}>
-                    <ListItemIcon>
-                    <PersonIcon id="text"/>
-                    </ListItemIcon>
-                    <ListItemText id="text" primary={"Profile"} />
-                  </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding>
-                  <ListItemButton onClick={() => navigate("/Settings")}>
-                    <ListItemIcon>
-                    <SettingsIcon id="text"/>
-                    </ListItemIcon>
-                    <ListItemText id="text" primary={"Settings"} />
-                  </ListItemButton>
-                </ListItem>
-            </List>
+            <ListItem disablePadding>
+              <ListItemButton onClick={() => navigate("/HomeScreen", {state:{name: location.state.name, email: location.state.email, bio: location.state.bio, jobtitle: location.state.jobtitle, DOB: location.state.DOB, cityState: location.state.cityState, password: location.state.password, school: location.state.school, selectedOptions: location.state.selectedOptions}})}>
+                <ListItemIcon>
+                <HomeIcon id="text"/>
+                </ListItemIcon>
+                <ListItemText id="text" primary={"Home"} />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton onClick={() => navigate("/Prompts", {state:{postArr: location.state.postArr, name: location.state.name, email: location.state.email, bio: location.state.bio, jobtitle: location.state.jobtitle, DOB: location.state.DOB, cityState: location.state.cityState, password: location.state.password, school: location.state.school, selectedOptions: location.state.selectedOptions}})}>
+                <ListItemIcon>
+                <AddIcon id="text"/>
+                </ListItemIcon>
+                <ListItemText id="text" primary={"Post"} />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton onClick={() => navigate("/Jobs", {state:{name: location.state.name, email: location.state.email, bio: location.state.bio, jobtitle: location.state.jobtitle, DOB: location.state.DOB, cityState: location.state.cityState, password: location.state.password, school: location.state.school, selectedOptions: location.state.selectedOptions}})}>
+                <ListItemIcon>
+                <WorkIcon id="text"/>
+                </ListItemIcon>
+                <ListItemText id="text" primary={"Jobs"} />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                <NotificationsIcon id="text"/>
+                </ListItemIcon>
+                <ListItemText id="text" primary={"Notifications"} />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton onClick={() => navigate("/Profile", {state:{name: location.state.name, email: location.state.email, bio: location.state.bio, jobtitle: location.state.jobtitle, DOB: location.state.DOB, cityState: location.state.cityState, password: location.state.password, school: location.state.school, selectedOptions: location.state.selectedOptions}})}>
+                <ListItemIcon>
+                <PersonIcon id="text"/>
+                </ListItemIcon>
+                <ListItemText id="text" primary={"Profile"} />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton onClick={() => navigate("/Settings", {state:{name: location.state.name, email: location.state.email, bio: location.state.bio, jobtitle: location.state.jobtitle, DOB: location.state.DOB, cityState: location.state.cityState, password: location.state.password, school: location.state.school, selectedOptions: location.state.selectedOptions}})}>
+                <ListItemIcon>
+                <SettingsIcon id="text"/>
+                </ListItemIcon>
+                <ListItemText id="text" primary={"Settings"} />
+              </ListItemButton>
+            </ListItem>
+        </List>
           </Drawer>
           <div id="rcornersprof3">
             <div id="rcornersprof4">
                 <div id="pd">
-                <div>
-                <Button id="bu" onClick={() => navigate("/Settings")}> <PersonOutlineIcon id="icon_colors"/> Personal Details <ArrowForwardIosOutlinedIcon/></Button>
+                <div id="sepicons">
+                <Button id="bu" onClick={() => navigate("/Settings", {state:{name: location.state.name, email: location.state.email, bio: location.state.bio, jobtitle: location.state.jobtitle, DOB: location.state.DOB, cityState: location.state.cityState, password: location.state.password, school: location.state.school, selectedOptions: location.state.selectedOptions}})}> <PersonOutlineIcon id="icon_colors"/> Personal Details <ArrowForwardIosOutlinedIcon id="arrowfor"/></Button>                
                 </div>
-                <Button id="bu2" onClick={() => navigate("/AccountSettings")}><SettingsIcon id="icon_colors"/> Account Settings <ArrowForwardIosOutlinedIcon/></Button>
+                <Button id="bu2" onClick={() => navigate("/AccountSettings", {state:{name: location.state.name, email: location.state.email, bio: location.state.bio, jobtitle: location.state.jobtitle, DOB: location.state.DOB, cityState: location.state.cityState, password: location.state.password, school: location.state.school, selectedOptions: location.state.selectedOptions}})}><SettingsIcon id="icon_colors"/> Account Settings <ArrowForwardIosOutlinedIcon id="arrowfor"/></Button>
                 <br/>
-                <Button id="bu2" onClick={() => navigate("/MyLayers")}><GridViewOutlinedIcon id="icon_colors"/> My Layers <ArrowForwardIosOutlinedIcon/></Button>
+                <Button id="bu2" onClick={() => navigate("/MyLayers", {state:{name: location.state.name, email: location.state.email, bio: location.state.bio, jobtitle: location.state.jobtitle, DOB: location.state.DOB, cityState: location.state.cityState, password: location.state.password, school: location.state.school, selectedOptions: location.state.selectedOptions}})}><GridViewOutlinedIcon id="icon_colors"/> My Layers <ArrowForwardIosOutlinedIcon id="arrowfor"/></Button>
                 </div>
             </div>
             <div>
@@ -125,7 +129,7 @@ function MyLayers() {
             {/* <p1 id="details">No Layer selected yet</p1> */}
             {/* <Result value = {this.state.value}/> */}
             </div>
-            <div id="shift">
+            <div id="shifty">
             <hr id="hrhrhr"/>
             <Button id="cancelcancel">Cancel</Button>
             <Button id="savesave">Save</Button>

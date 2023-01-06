@@ -27,6 +27,25 @@ import {useLocation} from 'react-router-dom';
 function Settings() {
     const navigate = useNavigate()
     const location = useLocation();
+    console.log("SETTINGS LOCATION", location)
+
+    const handleNameChange = event => {
+      location.state.name = event.target.value 
+      console.log("New Name is", location.state.name)
+    }
+    const handleDOBChange = event => {
+      location.state.DOB = event.target.value 
+      console.log("New DOB is", location.state.DOB)
+    }
+    const handleBioChange = event => {
+      location.state.bio = event.target.value 
+      console.log("New BIO is", location.state.bio)
+    }
+
+    const handleCityStateChange = event => {
+      location.state.cityState = event.target.value
+      console.log("New cityState is", location.state.cityState)
+    }
     return (
         <Box sx={{ display: 'flex', backgroundColor: '#E5E5E5' }}>
           <CssBaseline />
@@ -99,11 +118,11 @@ function Settings() {
             <div id="rcornersprof4">
                 <div id="pd">
                 <div>
-                <Button id="bu" onClick={() => navigate("/Settings")}> <PersonOutlineIcon id="icon_colors"/> Personal Details <ArrowForwardIosOutlinedIcon/></Button>
+                <Button id="bu" onClick={() => navigate("/Settings", {state:{name: location.state.name, email: location.state.email, jobtitle: location.state.jobtitle, DOB: location.state.DOB, cityState: location.state.cityState, password: location.state.password, school: location.state.school, selectedOptions: location.state.selectedOptions}})}> <PersonOutlineIcon id="icon_colors"/> Personal Details <ArrowForwardIosOutlinedIcon id="arrowfor"/></Button>                
                 </div>
-                <Button id="bu2" onClick={() => navigate("/AccountSettings")}><SettingsIcon id="icon_colors"/> Account Settings <ArrowForwardIosOutlinedIcon/></Button>
+                <Button id="bu2" onClick={() => navigate("/AccountSettings", {state:{name: location.state.name, email: location.state.email, jobtitle: location.state.jobtitle, DOB: location.state.DOB, cityState: location.state.cityState, password: location.state.password, school: location.state.school, selectedOptions: location.state.selectedOptions}})}><SettingsIcon id="icon_colors"/> Account Settings <ArrowForwardIosOutlinedIcon id="arrowfor"/></Button>
                 <br/>
-                <Button id="bu2" onClick={() => navigate("/MyLayers")}><GridViewOutlinedIcon id="icon_colors"/> My Layers <ArrowForwardIosOutlinedIcon/></Button>
+                <Button id="bu2" onClick={() => navigate("/MyLayers", {state:{name: location.state.name, email: location.state.email, jobtitle: location.state.jobtitle, DOB: location.state.DOB, cityState: location.state.cityState, password: location.state.password, school: location.state.school, selectedOptions: location.state.selectedOptions}})}><GridViewOutlinedIcon id="icon_colors"/> My Layers <ArrowForwardIosOutlinedIcon id="arrowfor"/></Button>
                 </div>
             </div>
             <div>
@@ -112,13 +131,13 @@ function Settings() {
             <Avatar id="av" alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
             </div>
             <div>
-            <input id="rcornersprof5" placeholder={location.state.name}/> 
+            <input id="rcornersprof5" placeholder={location.state.name} onChange={handleNameChange}/> 
             </div>
             <div>
-            <input id="rcornersprof6" placeholder={location.state.DOB}/>
+            <input id="rcornersprof6" placeholder={location.state.DOB} onChange={handleDOBChange}/>
             </div>
             <div>
-            <input id="rcornersprof7" placeholder={location.state.bio}/>
+            <input id="rcornersprof7" placeholder={location.state.bio} onChange={handleBioChange}/>
             </div>
             <hr id="hrhrhr"/>
             <Button id="cancelcancel">Cancel</Button>
@@ -129,7 +148,7 @@ function Settings() {
             <input id="rcornersprof55" placeholder="Last Name"/>
             </div> */}
             <div>
-            <input id="rcornersprof56" placeholder={location.state.cityState}/>
+            <input id="rcornersprof56" placeholder={location.state.cityState} onChange={handleCityStateChange}/>
             </div>
             </div>
 

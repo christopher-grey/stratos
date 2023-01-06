@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from "react";
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -33,10 +33,11 @@ import NavBar from '../components/NavBar';
 function Jobs() {
     const navigate = useNavigate()
     const location = useLocation();
-    // const [search, setSearch] = useState("");
+    const [search, setSearch] = useState("");
 
     // const handleSearchChange = e => {
     //   setSearch(e.target.value)
+    //   if (e.target.value == )
     //   console.log("Handling search", e.target.value)
     // }
 
@@ -44,17 +45,16 @@ function Jobs() {
     <div>
     <NavBar/>
       <div id="rcorners1012">
-      <div id="searchsearch">
-      <div>
-      <InputBase
-        id="inputbase"
+      <input 
+        id="searchsearch"
+        type="search"
+        // value={search}
         placeholder="Search for Jobs"
+        // onChange={handleSearchChange}
       />
       {/* <IconButton id ="searchicon" type="button" aria-label="search">
         <SearchIcon />
       </IconButton> */}
-      </div>
-      </div>
       <JobCard title="Product Manager" company="Apple" experience="1-2 years of experience" roletype="Full Time" positionhierarchy="Junior" />
       <JobCard title="Product Manager" company="Google" experience="1-2 years of experience" roletype="Full Time" positionhierarchy="Junior" />
       <JobCard title="Product Manager" company="Salesforce" experience="1-2 years of experience" roletype="Full Time" positionhierarchy="Junior" />

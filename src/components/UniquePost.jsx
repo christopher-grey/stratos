@@ -17,18 +17,30 @@ import { IconButton } from '@mui/material';
 function UniquePost(props) {
     const [likeCount, setLikeCount] = useState(0)
     const [commentCount, setCommentCount] = useState(0)
-    const [shareCount, setShareCount] = useState(0)
+    const [shareCount, setShareCount] = useState(0);
+    const [comment, setComment] = useState("");
 
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+
+
+    const handleCommentChange = event => {
+      setComment(event.target.value);
+      console.log("Latest Comment", event.target.value)
+    }
+
+    const handleCommentSend = event => {
+      setOpen(false)
+    }
 
     const style = {
       position: 'absolute',
       top: '50%',
       left: '50%',
       transform: 'translate(-50%, -50%)',
-      width: 400,
+      width: 650,
+      height: 550,
       bgcolor: 'background.paper',
       border: '2px solid #000',
       boxShadow: 24,
@@ -38,30 +50,32 @@ function UniquePost(props) {
     function onClickLike() {
       setLikeCount(likeCount + 1)
       console.log("CURRENT COUNT", likeCount)
-      setOpen(true)
-      console.log("OPEN", open)
-      return <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
+      // setOpen(true)
+      // console.log("OPEN", open)
+      // return <Modal
+      //   open={open}
+      //   onClose={handleClose}
+      //   aria-labelledby="modal-modal-title"
+      //   aria-describedby="modal-modal-description"
+      // >
 
-        <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography>
-        </Box>
+      //   <Box sx={style}>
+      //     <Typography id="modal-modal-title" variant="h6" component="h2">
+      //       Text in a modal
+      //     </Typography>
+      //     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+      //       Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+      //     </Typography>
+      //   </Box>
 
-        </Modal>
+      //   </Modal>
 
     }
     function onClickComment() {
       setCommentCount(commentCount + 1)
       console.log("CURRENT COUNT", commentCount)
+      setOpen(true)
+      console.log("OPEN", open)
 
     }
     function onClickShare() {
@@ -77,7 +91,7 @@ function UniquePost(props) {
             {props.name}
             </div>
             <div id="more_details">
-            <MoreVertIcon/>
+            {/* <MoreVertIcon id="mvI"/> */}
             </div>
           </div>
           <div id="dateOnPost">
@@ -101,10 +115,43 @@ function UniquePost(props) {
           </IconButton>
           </div>
           <div id="comments">
-          <IconButton className={"MyCustomButton"} onClick={onClickComment}>
+          <IconButton className={"MyCustomButton"} onClick={handleOpen}>
           <ChatIcon id="commentsIcon"/>
           <div id="commentCount">{commentCount == 0 ? null: commentCount}</div>
           </IconButton>
+          <div id="singlecomment">
+            <div id="commentName">
+              Evan Horio
+            </div>
+            <div id="commentcomment">
+            {comment}
+            </div>
+          </div>
+          <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+          >
+
+          <Box sx={style}>
+            {/* <Typography id="modal-modal-title" variant="h6" component="h2">
+              Text in a modal
+            </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+            </Typography> */}
+            <div>
+            <div>
+            <input id="modalsizing" placeholder="Enter the comment here" onChange={handleCommentChange}/>
+            </div>
+            <div>
+            <Button id="modalsend" onClick={handleCommentSend}>Send</Button>
+            </div>
+            </div>
+        </Box>
+
+        </Modal>
           </div>
           <div id="share">
           <IconButton className={"MyCustomButton"} onClick={onClickShare}>
