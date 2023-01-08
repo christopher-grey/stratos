@@ -1,6 +1,7 @@
 import './App.css';
 // import Button from 'react-bootstrap/Button';
 // import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
+import React, { Component }  from 'react';
 
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Splash from "./Pages/Splash";
