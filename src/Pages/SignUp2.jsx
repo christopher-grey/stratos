@@ -57,7 +57,7 @@ const SignUp2 = () => {
           console.log("ERRORRRRRR")
           console.error("Error adding document: ", e);
         }
-  }
+  } 
 
     return (
       <div id='welcome'>
